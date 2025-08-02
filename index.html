@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Món Quà Đặc Biệt Từ Pikachu Dành Cho Bạn ❤️</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+
+      body {
+        background-color: #fff9c4;
+        color: #5d4037;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header {
+        background-color: #ffeb3b;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      h1 {
+        color: #e53935;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 0 #ffd54f;
+      }
+
+      .pikachu-ears {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #ffd54f;
+        top: -20px;
+        border-radius: 50% 50% 0 0;
+      }
+
+      .pikachu-ears:before,
+      .pikachu-ears:after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #5d4037;
+        border-radius: 50%;
+        top: 15px;
+      }
+
+      .ear-left {
+        left: 20px;
+        transform: rotate(-30deg);
+      }
+
+      .ear-right {
+        right: 20px;
+        transform: rotate(30deg);
+      }
+
+      .ear-left:before {
+        left: 10px;
+      }
+
+      .ear-right:after {
+        right: 10px;
+      }
+
+      .cheeks {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #ff8a65;
+        border-radius: 50%;
+        bottom: 15px;
+      }
+
+      .cheek-left {
+        left: 30px;
+      }
+
+      .cheek-right {
+        right: 30px;
+      }
+
+      .message-box {
+        background-color: white;
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 3px dashed #ffd54f;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .heart {
+        color: #e53935;
+        font-size: 1.5rem;
+        animation: heartbeat 1.5s infinite;
+        display: inline-block;
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background-color: #000;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #ffd54f;
+        border-radius: 30px;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.3s;
+      }
+
+      input[type="text"]:focus {
+        border-color: #ff9800;
+        box-shadow: 0 0 0 3px rgba(255, 214, 79, 0.3);
+      }
+
+      button {
+        background-color: #ff5722;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1rem;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: bold;
+        box-shadow: 0 4px 0 #e64a19;
+        text-transform: uppercase;
+      }
+
+      button:hover {
+        background-color: #e64a19;
+        transform: translateY(2px);
+        box-shadow: 0 2px 0 #bf360c;
+      }
+
+      .pikachu-footer {
+        margin-top: 30px;
+        position: relative;
+        height: 100px;
+      }
+
+      .pikachu-tail {
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        background: #ffd54f;
+        right: 50px;
+        top: -20px;
+        border-radius: 15px;
+        transform: rotate(45deg);
+      }
+
+      .pikachu-tail:before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        background: #ffd54f;
+        right: -20px;
+        top: 10px;
+        border-radius: 10px;
+        transform: rotate(45deg);
+      }
+
+      footer {
+        margin-top: 50px;
+        font-size: 0.9rem;
+        color: #795548;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .container {
+          padding: 10px;
+        }
+
+        .message-box {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="pikachu-ears ear-left"></div>
+        <div class="pikachu-ears ear-right"></div>
+        <div class="cheeks cheek-left"></div>
+        <div class="cheeks cheek-right"></div>
+        <h1>
+          PIKACHU CÓ MÓN QUÀ ĐẶC BIỆT GỬI BẠN <span class="heart">❤️</span>
+        </h1>
+      </header>
+
+      <div class="message-box">
+        <p>Chào em! bạn yêu dấu của Pikachu!</p>
+        <p>Pika pika! Anh có một video muốn gửi em nè!</p>
+        <p>
+          Bình thường anh hay gửi qua Tiktok thôi đúng khum! Nhưng nay anh sẽ
+          gửi em bằng một cách khá đặc biệt một xíu. Hi vọng trước giờ anh nghĩ
+          chưa có ai làm những điều này như anh. Em có thấy anh hơi khùn khùn
+          hong. Hong sao đâu anh biết mà kkkk.
+        </p>
+        <p>Hãy xem hết video này nhé<span class="heart">I Crush On U❤️</span></p>
+      </div>
+
+      <!-- <div class="input-group">
+        <input
+          type="text"
+          id="youtube-url"
+          placeholder="Dán link video YouTube vào đây nè..."
+          value="https://www.youtube.com/embed/..."
+        />
+        <p><small>(Bạn có thể thay đổi video nếu muốn)</small></p>
+      </div> -->
+
+      <div class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/R1m7p-Cx7S4?si=JR0K-z4ryrB05rw1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <button onclick="updateVideo()">Gửi Tình Yêu Pika Pika ❤️</button>
+
+      <div class="pikachu-footer">
+        <div class="pikachu-tail"></div>
+      </div>
+
+      <footer>
+        <p>
+          Made with <span class="heart">❤️</span> by Pikachu | Mọi video đều là
+          tình cảm chân thành
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      function updateVideo() {
+        const urlInput = document.getElementById("youtube-url").value;
+        let videoId = "";
+
+        // Kiểm tra và trích xuất ID video từ các dạng URL YouTube
+        if (urlInput.includes("youtube.com/watch?v=")) {
+          videoId = urlInput.split("v=")[1];
+          const ampersandPosition = videoId.indexOf("&");
+          if (ampersandPosition !== -1) {
+            videoId = videoId.substring(0, ampersandPosition);
+          }
+        } else if (urlInput.includes("youtu.be/")) {
+          videoId = urlInput.split("youtu.be/")[1];
+        } else if (urlInput.includes("embed/")) {
+          videoId = urlInput.split("embed/")[1];
+        } else {
+          videoId = urlInput; // Giả sử đã là ID video
+        }
+
+        // Cập nhật iframe
+        document.getElementById(
+          "video-frame"
+        ).src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+
+        // Hiển thị thông báo
+        alert("Pika pika! Video đã được gửi thành công! ❤️");
+      }
+
+      // Tự động chạy khi trang load
+      window.onload = function () {
+        // Thêm hiệu ứng cho má Pikachu
+        setInterval(() => {
+          const cheeks = document.querySelectorAll(".cheeks");
+          cheeks.forEach((cheek) => {
+            cheek.style.backgroundColor = `rgb(255, ${
+              138 + Math.random() * 50
+            }, ${101 + Math.random() * 50})`;
+          });
+        }, 500);
+      };
+    </script>
+  </body>
+</html>
